@@ -1,0 +1,24 @@
+# understanding the iris dataset
+
+```{r}
+# import necessary libraries
+library(dplyr)
+library(ggplot2)
+library(skimr)
+```
+
+## loadin the iris data
+
+```{r}
+irs<-datasets::iris3
+irs<-data.frame(irs)
+View(irs)
+
+```
+
+# Dataset information
+
+```{r}
+str(iris)
+summary(iris)
+```
