@@ -7,18 +7,23 @@ library(ggplot2)
 library(skimr)
 ```
 
-## loadin the iris data
+## loading the iris data
 
 ```{r}
 irs<-datasets::iris3
 irs<-data.frame(irs)
 View(irs)
-
+ 
 ```
 
-# Dataset information
+# Removing the dots and substituting the length and width
 
 ```{r}
-str(iris)
-summary(iris)
+library(stringr)
+colnames(irs) <-
+  str_replace_all(colnames(irs),
+ c("\\." = " ", "L" = "Length",
+   "W" = "Width"))
+      View(irs)
+  
 ```
